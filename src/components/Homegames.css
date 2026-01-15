@@ -1,0 +1,153 @@
+/* Homegames.css - Versão Mobile Premium */
+
+:root {
+    --gold: #b8860b;
+    --gold-light: #daa520;
+    --bg-overlay: rgba(0, 0, 0, 0.63);
+}
+
+.home-container {
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center;
+    box-sizing: border-box;
+    background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), 
+                url('/images/background-barbearia.png') center center no-repeat;
+    background-size:100% 100%; /* Melhor que 100% 100% para evitar distorção */
+    color: #f0f0f0;
+    text-align: center;
+}
+.brand-header h3 {
+    font-size: clamp(1.7rem, 8vw, 2.8rem); 
+    margin-bottom: clamp(30px, 8vh, 50px); 
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+   
+    margin: 0;
+
+}
+.flex-spacer {
+    flex: 1;
+}
+
+.home-content {
+    margin-top: -290px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem); 
+    margin-bottom: clamp(30px, 8vh, 50px); 
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    padding: 0 10px;
+}
+
+/* AJUSTE AQUI: Aumentamos a largura máxima para 3 botões caberem bem no PC */
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    width: 90%;
+    max-width: 700px; /* Aumentado de 500px para 700px */
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* AJUSTE AQUI: O Link do React Router precisa ser flex para o botão ocupar o espaço */
+.nav-link {
+    flex: 1;
+    display: flex;
+    text-decoration: none;
+}
+
+.btn-primary, .btn-secondary {
+    padding: clamp(12px, 2.5vh, 20px) 15px;
+    font-weight: 800;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: clamp(0.75rem, 2vw, 0.9rem); /* Fonte levemente menor para caber os 3 */
+    border: none;
+    flex: 1; 
+    width: 100%; /* Garante preenchimento do nav-link */
+    
+}
+
+.btn-primary {
+    background-color: var(--gold);
+    color: #000;
+    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+     border: 2px solid rgb(15, 15, 15);
+}
+
+.btn-primary:hover {
+    background-color: var(--gold-light);
+    transform: translateY(-3px);
+    
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--gold-light);
+    border: 2px solid var(--gold);
+    background-color: rgb(22, 22, 22);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(184, 134, 11, 0.1);
+    border-color: var(--gold-light);
+    transform: translateY(-3px);
+}
+
+.home-footer {
+    position: absolute;
+    font-weight: 600;
+    width: 100%;
+    padding: 20px 0;
+    font-size: clamp(0.7rem, 2vw, 1.18rem);
+    color:#daa520;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+        width: 100vw;
+        bottom: 0;
+    background-color: rgb(15, 15, 15);
+}
+
+/* --- RESPONSIVIDADE PARA CELULAR --- */
+@media (max-width: 768px) {
+    .nav-buttons {
+        flex-direction: column; 
+        gap: 12px;
+        width: 100%;
+        max-width: 300px; /* No celular, os botões ficam mais elegantes estreitos */
+    }
+
+    .nav-link {
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        font-size: 0.9rem;
+        padding: 18px;
+    }
+    
+    .flex-spacer {
+        flex: 0.4;
+    }
+}
