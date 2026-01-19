@@ -4,50 +4,41 @@
  export const servicosBarbearia = [
   // --- Categoria: Cortes e Barba Clássicos ---
   {
-    categoria: "Cortes e Barba Clássicos",
+    categoria: "Cortes e Barba",
     servicos: [
       {
-        nome: "Corte de Cabelo Simples/Máquina",
-        descricao: "Corte rápido com máquina e acabamento básico.",
-        precoMin: 20.00,
-        precoMax: 40.00,
-      },
-      {
-        nome: "Corte Elaborado/Clássico",
-        descricao: "Corte com tesoura ou máquina, incluindo lavagem e finalização (ex: Undercut, Social).",
-        precoMin: 50.00,
-        precoMax: 85.00,
-      },
-      {
-        nome: "Corte Degradê (Fade)",
-        descricao: "Corte que utiliza a técnica de degradê (Fade) com alta precisão.",
-        precoMin: 50.00,
-        precoMax: 80.00,
-      },
-      {
-        nome: "Barba Simples/Acabamento",
-        descricao: "Alinhamento da barba e desenho do contorno com máquina ou navalha.",
+        nome: "Corte de cabelo degradê",
+        descricao: "Onde o cabelo sobe do raspado nas laterais até fios mais longos no topo.",
         precoMin: 25.00,
-        precoMax: 45.00,
       },
       {
-        nome: "Barboterapia Clássica",
-        descricao: "Barba feita com navalha, toalha quente, espuma, pós-barba e massagem relaxante.",
-        precoMin: 50.00,
-        precoMax: 80.00,
+        nome: "Corte social",
+        descricao: "Laterais baixas e topo médio, focado em elegância e praticidade.",
+        precoMin: 25.00,
       },
       {
-        nome: "Combo (Corte + Barba)",
-        descricao: "Corte de cabelo e Barboterapia Clássica.",
-        precoMin: 70.00,
-        precoMax: 130.00,
-      },
-      {
-        nome: "Corte Infantil",
-        descricao: "Corte de cabelo para crianças.",
+        nome: "Corte todo na tesoura",
+        descricao: "Acabamento natural e personalizado, priorizando o movimento e o caimento dos fios.",
         precoMin: 30.00,
-        precoMax: 50.00,
+       
       },
+      {
+        nome: "Corte kids",
+        descricao: "Corte especial para crianças, feito com paciência e cuidado.",
+        precoMin: 30.00,
+       
+      },
+      {
+        nome: "Barba cavanhaque",
+        descricao: "Visual moderno e desenhado para quem busca estilo e definição.",
+        precoMin: 5.00,
+      },
+      {
+        nome: "Barba completa",
+        descricao: "Garantindo uma barba alinhada, e com o acabamento impecável.",
+        precoMin: 10.00,
+      },
+     
     ],
   },
 
@@ -57,73 +48,25 @@
     observacao: "Os preços podem variar significativamente dependendo do comprimento e volume.",
     servicos: [
       {
-        nome: "Pigmentação de Cabelo",
-        descricao: "Uso de tonalizante para cobrir falhas e uniformizar a cor dos fios.",
-        precoMin: 60.00,
-        precoMax: 120.00,
+        nome: "Nevou",
+        descricao: "Descoloração total dos fios até atingir o tom branco platinado.",
+        precoMin: 70.00,
+        
       },
       {
-        nome: "Pigmentação de Barba",
-        descricao: "Uso de tonalizante para preenchimento e realce da barba.",
-        precoMin: 40.00,
-        precoMax: 70.00,
+        nome: "Reflexo",
+        descricao: "Mechas que trazem brilho, movimento e destaque para o seu corte.",
+        precoMin: 70.00,
       },
       {
-        nome: "Luzes / Reflexos",
-        descricao: "Clareamento de mechas do cabelo (inclui descoloração e tonalização).",
-        precoMin: 100.00, // Preço 'A partir de'
-        precoMax: 250.00,
+        nome: "Coloracão preta",
+        descricao: "Cobertura total de fios brancos para o preto com brilho e alta fixação.",
+        precoMin: 60.00, // Preço 'A partir de'
+       
       },
-      {
-        nome: "Platinado",
-        descricao: "Descoloração e tonalização para atingir o tom loiro/branco (exige avaliação).",
-        precoMin: 150.00, // Preço 'A partir de'
-        precoMax: 300.00,
-      },
-      {
-        nome: "Progressiva / Selagem",
-        descricao: "Tratamento químico para alisar, reduzir o volume e o frizz.",
-        precoMin: 100.00, // Preço 'A partir de'
-        precoMax: 200.00,
-      },
+      
     ],
   },
 
-  // --- Categoria: Estética e Tratamentos ---
-  {
-    categoria: "Estética e Tratamentos",
-    servicos: [
-      {
-        nome: "Hidratação Capilar",
-        descricao: "Tratamento para repor nutrientes, brilho e maciez nos fios.",
-        precoMin: 20.00,
-        precoMax: 50.00,
-      },
-      {
-        nome: "Limpeza de Pele Facial",
-        descricao: "Limpeza profunda, remoção de impurezas e aplicação de máscara.",
-        precoMin: 30.00,
-        precoMax: 100.00,
-      },
-      {
-        nome: "Design de Sobrancelha",
-        descricao: "Modelagem e alinhamento das sobrancelhas (pinça e/ou navalha).",
-        precoMin: 20.00,
-        precoMax: 40.00,
-      },
-      {
-        nome: "Depilação (Nariz e Orelha)",
-        descricao: "Remoção de pelos indesejados com cera específica ou máquina.",
-        precoMin: 10.00,
-        precoMax: 30.00,
-      },
-      {
-        nome: "Pézinho / Contorno",
-        descricao: "Apenas o acabamento e alinhamento da nuca e costeletas.",
-        precoMin: 15.00,
-        precoMax: 35.00,
-      },
-    ],
-  },
 ];
 
