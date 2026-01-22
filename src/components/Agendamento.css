@@ -7,7 +7,67 @@
   --text-gray: #aaaaaa;
 }
 
-/* Estrutura Principal */
+/* --- Perfil do Usuário (Ajustado) --- */
+.user-profile-header {
+  position: absolute;
+  top: clamp(10px, 2vh, 15px);
+  right: clamp(10px, 2vw, 15px);
+  z-index: 10;
+  display: flex;
+}
+
+.user-info-wrapper {
+  display: flex;
+  align-items: center;
+  /* O gap agora escala conforme a tela */
+  gap: clamp(10px, 2.5vw, 15px); 
+  background: rgba(255, 255, 255, 0.05);
+  /* Padding responsivo para manter o formato de pílula */
+  padding: clamp(5px, 1.2vh, 8px) clamp(12px, 3vw, 18px);
+  border-radius: 50px;
+  border: 1px solid rgba(184, 134, 11, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.logout-simple-btn {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  /* Fonte responsiva para o botão Sair */
+  font-size: clamp(0.65rem, 2vw, 0.75rem);
+  font-weight: 800;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+}
+
+.logout-simple-btn:hover {
+  opacity: 0.7;
+}
+
+.unisex-avatar svg {
+  /* O ícone diminui em telas pequenas e aumenta em telas grandes */
+  width: clamp(18px, 4.5vw, 22px);
+  height: clamp(18px, 4.5vw, 22px);
+  color: var(--gold);
+  display: block;
+}
+
+/* --- Ajuste na Responsividade Mobile --- */
+@media (max-width: 850px) {
+  .user-profile-header {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-bottom: clamp(15px, 4vh, 25px);
+    width: 100%;
+    justify-content: center;
+    order: -2;
+  }
+}
+
+/* MANTENDO O RESTANTE DO SEU LAYOUT ORIGINAL ABAIXO */
+
 .agendamento-page {
   min-height: 100vh;
   width: 100vw;
@@ -40,51 +100,6 @@
   .agendamento-container { width: 40%; }
 }
 
-/* --- Perfil do Usuário --- */
-.user-profile-header {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  z-index: 10;
-  display: flex;
-}
-
-.user-info-wrapper {
-  display: flex;
-  align-items: center;
-  gap: clamp(8px, 2vw, 12px);
-  background: rgba(255, 255, 255, 0.05);
-  padding: clamp(6px, 1.5vh, 10px) clamp(12px, 3vw, 20px);
-  border-radius: 50px;
-  border: 1px solid rgba(184, 134, 11, 0.2);
-}
-
-.user-details { 
-  display: flex; 
-  flex-direction: column; 
-  align-items: flex-end; 
-}
-
-.user-name { 
-  font-size: clamp(0.75rem, 2.5vw, 0.9rem); 
-  font-weight: 600; 
-  color: #fff; 
-}
-
-.logout-simple-btn {
-  background: none; border: none; color: #ff4d4d;
-  font-size: clamp(0.6rem, 2vw, 0.7rem); 
-  font-weight: 800; cursor: pointer; text-transform: uppercase;
-  margin-top: 2px;
-}
-
-.unisex-avatar svg { 
-  width: clamp(20px, 5vw, 24px); 
-  height: clamp(20px, 5vw, 24px); 
-  color: var(--gold); 
-}
-
-/* --- Cabeçalho --- */
 .brand-header {
   text-align: center;
   margin-bottom: 15px;
@@ -99,7 +114,6 @@
   margin: 0;
 }
 
-/* --- Categorias e Serviços --- */
 .category-group h4 {
   color: var(--gold-light);
   font-size: clamp(0.75rem, 2vw, 0.85rem);
@@ -121,7 +135,6 @@
   gap: 10px;
 }
 
-/* Marcação do Checkbox */
 .service-card.selected {
   border-color: var(--gold) !important;
   background: rgba(184, 134, 11, 0.15) !important;
@@ -151,7 +164,6 @@
   font-weight: bold;
 }
 
-/* --- Grid Principal --- */
 .main-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -164,7 +176,6 @@
   padding-right: 5px;
 }
 
-/* --- Horários --- */
 .slots-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(clamp(55px, 15vw, 65px), 1fr));
@@ -177,7 +188,6 @@
 }
 .slot-pill.active { background: var(--gold) !important; color: #000 !important; font-weight: bold; }
 
-/* --- Footer --- */
 .sticky-footer {
   margin-top: auto;
   padding-top: 15px;
@@ -190,47 +200,4 @@
 .confirm-btn {
   background: var(--gold); color: #000; border: none;
   padding: 12px 20px; border-radius: 6px; font-weight: 800; cursor: pointer;
-}
-
-/* --- RESPONSIVIDADE MOBILE (CORREÇÃO FINAL) --- */
-@media (max-width: 850px) {
-  .agendamento-container { 
-    height: auto; 
-    margin: 10px 0; 
-    width: 95%; 
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza tudo horizontalmente */
-  }
-
-  /* Perfil Centralizado no TOPO */
-  .user-profile-header {
-    position: relative; /* Muda de absolute para relative para entrar na pilha */
-    top: 0;
-    right: 0;
-    margin-bottom: 20px;
-    width: 100%;
-    justify-content: center;
-    order: -2; /* Primeiro da lista */
-  }
-
-  .user-details {
-    align-items: center; /* Centraliza nome e botão Sair */
-  }
-
-  /* Título logo abaixo do perfil */
-  .brand-header {
-    width: 100%;
-    order: -1; 
-  }
-
-  /* Categorias (Grid) logo abaixo do título */
-  .main-grid { 
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
-
-  .service-list-container {
-    width: 100%;
-  }
 }

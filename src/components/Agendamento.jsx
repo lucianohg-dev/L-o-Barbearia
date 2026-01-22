@@ -209,23 +209,23 @@ function AppointmentForm() {
 
     return (
         <div className="agendamento-page">
-                <div className="user-profile-header">
-                    <div className="user-info-wrapper">
-                        <div className="user-details">
-                            <span className="user-name">{name || 'Cliente'}</span>
-                            <button onClick={() => { signOut(auth); navigate('/'); }} className="logout-simple-btn">Sair</button>
-                        </div>
-                        <div className="unisex-avatar">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 11C13.6569 11 15 9.65685 15 8C15 6.34315 13.6569 5 12 5C10.3431 5 9 6.34315 9 8C9 9.65685 10.3431 11 12 11Z" fill="currentColor"/>
-                                <path d="M18 18.5C18 15.4624 15.3137 13 12 13C8.68629 13 6 15.4624 6 18.5V19H18V18.5Z" fill="currentColor"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
+              
             <div className="agendamento-container">
+
                 <div className="brand-header">
                     <h1>Léo-Barbearia</h1>
+                    <div className="user-profile-header">
+    <div className="user-info-wrapper">
+        <button className='sairUser' onClick={() => { signOut(auth); navigate('/'); }} className="logout-simple-btn">Sair</button>
+        
+        <div className="unisex-avatar">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 11C13.6569 11 15 9.65685 15 8C15 6.34315 13.6569 5 12 5C10.3431 5 9 6.34315 9 8C9 9.65685 10.3431 11 12 11Z" fill="currentColor"/>
+                <path d="M18 18.5C18 15.4624 15.3137 13 12 13C8.68629 13 6 15.4624 6 18.5V19H18V18.5Z" fill="currentColor"/>
+            </svg>
+        </div>
+    </div>
+</div>
                 </div>
 
                 {errorMessage && <div className="error-banner">{errorMessage}</div>}
